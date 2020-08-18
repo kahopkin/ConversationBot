@@ -1,0 +1,44 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+      {
+          "type": "TextBlock",
+          "spacing": "Medium",
+          "size": "default",
+          "weight": "Bolder",
+          "text": "Welcome to Conversational Bot",
+          "wrap": true,
+          "maxLines": 0
+      },
+      {
+          "type": "TextBlock",
+          "size": "default",
+          "isSubtle": true,
+          "text": "Hello, nice to meet you!",
+          "wrap": true,
+          "maxLines": 0
+      },
+      {
+          "type": "Image",
+          "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+          "size": "Medium",
+          "selectAction": {
+              "type": "Action.OpenUrl"
+          }
+      }
+  ],
+  "actions": [
+      {
+          "type": "Action.OpenUrl",
+          "title": "Learn more about Yo Teams",
+          "url": "https://aka.ms/yoteams"
+      },
+      {
+          "type": "Action.OpenUrl",
+          "title": "Conversational Bot",
+          "url": "https://conversationalbot.azurewebsites.net"
+      }
+  ]
+}
