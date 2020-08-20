@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0a852124-8def-4556-a374-742837360847/resourceGroups/ConversationBotResourceGroup/providers/Microsoft.Web/sites/conversationalbot",
+    "appService.deploySubpath": "."
+}

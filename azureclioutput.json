@@ -1,0 +1,44 @@
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "985a21fd-ce9b-486f-9d02-d0b1edae1f8b",
+    "id": "0a852124-8def-4556-a374-742837360847",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Visual Studio Ultimate with MSDN",
+    "state": "Enabled",
+    "tenantId": "985a21fd-ce9b-486f-9d02-d0b1edae1f8b",
+    "user": {
+      "name": "katalinhopkins@live.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "d98c6f7d-98d6-4bab-96ca-e4eae5745f58",
+    "id": "95b96b9a-2670-409f-ac57-db154fc576de",
+    "isDefault": false,
+    "managedByTenants": [],
+    "name": "Visual Studio Enterprise  MPN",
+    "state": "Enabled",
+    "tenantId": "d98c6f7d-98d6-4bab-96ca-e4eae5745f58",
+    "user": {
+      "name": "katalinhopkins@live.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "1b652a67-384a-4367-bdeb-9cab259d7697",
+    "id": "bc3930a6-6aae-466e-b0a3-42c5490efcdb",
+    "isDefault": false,
+    "managedByTenants": [],
+    "name": "Visual Studio Enterprise",
+    "state": "Enabled",
+    "tenantId": "1b652a67-384a-4367-bdeb-9cab259d7697",
+    "user": {
+      "name": "katalinhopkins@live.com",
+      "type": "user"
+    }
+  }
+]
