@@ -81,6 +81,8 @@ You can use the following flags for the `serve`, `ngrok-serve` and build command
 * `--no-linting` - skips the linting of Typescript during build to improve build times
 * `--debug` - builds in debug mode
 
+Set Up Continuous Deployment using GitHub Repo: https://github.com/kahopkin/ConversationBot
+
 ## Deploying to Azure using Git
 
 If you want to deploy to Azure using Git follow these steps.
