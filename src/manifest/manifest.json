@@ -1,72 +1,66 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.7",
-    "version": "1.0.0",
-    "id": "9db4e892-9277-4c6e-9760-2cb0877aa54c",
-    "packageName": "ConversationalBot",
-    "developer": {
-        "name": "LearnTeamsDev",
-        "websiteUrl": "https://m365x973951.sharepoint.com",
-        "privacyUrl": "https://m365x973951.sharepoint.com/privacy.html",
-        "termsOfUseUrl": "https://m365x973951.sharepoint.com/tou.html"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "Conversational Bot",
-        "full": "Conversational Bot"
-    },
-    "description": {
-        "short": "ConversationalBot",
-        "full": "Conversational Bot: Exercise 1 Creating conversational bots for Microsoft Teams in the Extend Microsoft Teams – Associate -> Create interactive conversational bots for Microsoft Teams\nhttps://docs.microsoft.com/en-us/learn/modules/msteams-conversation-bots/3-exercise-conversation-bots"
-    },
-    "accentColor": "#235EA5",
-    "bots": [
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "id": "f332cee9-06ba-4bea-acec-9f4d55d1d2a9",
+  "version": "0.0.1",
+  "packageName": "conversationalbot",
+  "developer": {
+    "name": "Contoso",
+    "websiteUrl": "https://{{HOSTNAME}}",
+    "privacyUrl": "https://{{HOSTNAME}}/privacy.html",
+    "termsOfUseUrl": "https://{{HOSTNAME}}/tou.html"
+  },
+  "name": {
+    "short": "Conversational Bot",
+    "full": "Conversational Bot"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [
+    {
+      "botId": "{{MICROSOFT_APP_ID}}",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ],
+      "commandLists": [
         {
-            "botId": "9db4e892-9277-4c6e-9760-2cb0877aa54c",
-            "scopes": [
-                "team",
-                "personal"
-            ],
-            "commandLists": [
-                {
-                    "scopes": [
-                        "personal"
-                    ],
-                    "commands": [
-                        {
-                            "title": "Help",
-                            "description": "Shows help information"
-                        },
-                        {
-                            "title": "MentionMe",
-                            "description": "Sends message with @mention of the sender"
-                        }
-                    ]
-                },
-                {
-                    "scopes": [
-                        "team"
-                    ],
-                    "commands": [
-                        {
-                            "title": "Help",
-                            "description": "Shows help information"
-                        }
-                    ]
-                }
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": false
+          "scopes": [
+            "team",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Shows help information"
+            },
+            {
+              "title": "MentionMe",
+              "description": "Sends message with @mention of the sender"
+            }
+          ]
         }
-    ],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": [
-        "conversationalbot.azurewebsites.net"
-    ]
+      ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "{{HOSTNAME}}"
+  ]
 }

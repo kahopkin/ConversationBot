@@ -5,8 +5,6 @@
 // Load general config
 const config = require('./gulp.config');
 
-const package = require("./package.json");
-
 // NodeJS
 const fs = require('fs'),
     path = require('path');
@@ -46,14 +44,7 @@ const
 
 const webpack = require('webpack');
 
-const env = argv["env"];
-if (env === undefined) {
-    require('dotenv').config();
-} else {
-    log(`Using custom .env`);
-    require('dotenv').config({ path: path.resolve(process.cwd(), env) });
-}
-process.env.VERSION = package.version;
+require('dotenv').config();
 
 /**
  * Setting up environments
