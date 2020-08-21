@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.5",
-    "version": "1.0.1",
+    "manifestVersion": "1.7",
+    "version": "1.0.0",
     "id": "9db4e892-9277-4c6e-9760-2cb0877aa54c",
     "packageName": "ConversationalBot",
     "developer": {
@@ -20,9 +20,9 @@
     },
     "description": {
         "short": "ConversationalBot",
-        "full": "Conversational Bot"
+        "full": "Conversational Bot: Exercise 1 Creating conversational bots for Microsoft Teams in the Extend Microsoft Teams – Associate -> Create interactive conversational bots for Microsoft Teams\nhttps://docs.microsoft.com/en-us/learn/modules/msteams-conversation-bots/3-exercise-conversation-bots"
     },
-    "accentColor": "#781EFC",
+    "accentColor": "#235EA5",
     "bots": [
         {
             "botId": "9db4e892-9277-4c6e-9760-2cb0877aa54c",
