@@ -1,5 +1,7 @@
 # Conversational Bot - `conversationalBot`
-LocalPath:\n\nC:\GitHubRepos\ConversationBot
+LocalPath:<br>C:\GitHubRepos\ConversationBot
+Messaging EndPoint:<br>
+https://conversationalbot.azurewebsites.net/api/messages
 
 ## How to register the bot in the Bot Framework portal
 
