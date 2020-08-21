@@ -54,7 +54,11 @@ export class ConversationalBot extends TeamsActivityHandler {
                     let text = TurnContext.removeRecipientMention(context.activity);
                     text = text.toLowerCase();
                     if (text.startsWith("mentionme")){
-                        await this.handleMessageMentionMeOneOnOne(context);
+                        if (context.activity.conversation.conversationType == "personal") {
+                            await this.handleMessageMentionMeOneOnOne(context);
+                          } else {
+                            await this.handleMessageMentionMeChannelConversation(context);
+                          }
                         return;
                         } else if (text.startsWith("hello")) {
                         await context.sendActivity("Oh, hello to you as well!");
@@ -108,4 +112,17 @@ export class ConversationalBot extends TeamsActivityHandler {
     await context.sendActivity(replyActivity);
   }
 
+  //implement the handler for support being added to a team and respond to messages from the Conversations tab.
+  private async handleMessageMentionMeChannelConversation(context: TurnContext): Promise<void> {
+    const mention = {
+      mentioned: context.activity.from,
+      text: `<at>${new TextEncoder().encode(context.activity.from.name)}</at>`,
+      type: "mention"
+    };
+  
+    const replyActivity = MessageFactory.text(`Hi ${mention.text}!`);
+    replyActivity.entities = [mention];
+    const followupActivity = MessageFactory.text(`*We are in a channel conversation*`);
+    await context.sendActivities([replyActivity, followupActivity]);
+  }
 }//ConversationalBotClass
