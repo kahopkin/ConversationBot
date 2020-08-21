@@ -1,4 +1,5 @@
 # Conversational Bot - `conversationalBot`
+LocalPath:\n\nC:\GitHubRepos\ConversationBot
 
 ## How to register the bot in the Bot Framework portal
 
