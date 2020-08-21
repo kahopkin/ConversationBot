@@ -2,7 +2,15 @@ import { BotDeclaration, MessageExtensionDeclaration, PreventIframe } from "expr
 import * as debug from "debug";
 import { DialogSet, DialogState } from "botbuilder-dialogs";
 import {
-  StatePropertyAccessor,
+    ChannelInfo,
+    TeamsChannelData,
+    ConversationParameters,
+    teamsGetChannelId,
+    Activity,
+    BotFrameworkAdapter,
+    ConversationReference,
+    ConversationResourceResponse,
+    StatePropertyAccessor,
   CardFactory,
   TurnContext,
   MemoryStorage,
@@ -61,6 +69,10 @@ export class ConversationalBot extends TeamsActivityHandler {
               case "delete":
                 await this.deleteCardActivity(context);
                 break;
+            case "newconversation":
+                const message = MessageFactory.text("This will be the first message in a new thread");
+                await this.createConversation(context, message);
+                break;
             }
           } else {
             let text = TurnContext.removeRecipientMention(context.activity);
@@ -112,6 +124,11 @@ export class ConversationalBot extends TeamsActivityHandler {
                     "type": "Action.Submit",
                     "title": "Update card",
                     "data": value
+                  },
+                  {
+                    "type": "Action.Submit",
+                    "title": "Create new thread in this channel",
+                    "data": { cardAction: "newconversation" }
                   }
                 ]
               });
@@ -228,4 +245,18 @@ export class ConversationalBot extends TeamsActivityHandler {
     await context.deleteActivity(context.activity.replyToId);
   }
 
-}
+  //create the new conversation
+  private async createConversation(context: TurnContext, message: Partial<Activity>): Promise<void> {
+    // get a reference to the bot adapter & create a connection to the Teams API
+    const adapter = <BotFrameworkAdapter>context.adapter;
+  
+    // create a new conversation and get a reference to it
+    const conversationReference = <ConversationReference>TurnContext.getConversationReference(context.activity);
+  
+    // send message
+    await adapter.continueConversation(conversationReference, async turnContext => {
+      await turnContext.sendActivity(message);
+    });
+  }
+
+}//ConversationalBot
