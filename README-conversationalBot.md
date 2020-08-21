@@ -1,5 +1,10 @@
-# Conversational Bot - `conversationalBot`
+# Conversational Bot - `ConversationalBot`
 LocalPath:<br>C:\GitHubRepos\ConversationBot
+|     Name           |Value|
+|----------------|-------------------------------|
+|MICROSOFT_APP_ID|`9db4e892-9277-4c6e-9760-2cb0877aa54c`|
+|MICROSOFT_APP_PASSWORD|`LB_XfOTSI768uEaR0X.DaxL8Lp_6-57.3a`|
+
 Messaging EndPoint:<br>
 https://conversationalbot.azurewebsites.net/api/messages
 
