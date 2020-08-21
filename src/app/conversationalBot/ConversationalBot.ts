@@ -166,6 +166,21 @@ export class ConversationalBot extends TeamsActivityHandler {
             case "heart":
               await context.sendActivity("reaction.Type=" + reaction.type + " - Thank you! I HEART you 2!");
               break;
+            case "laugh":
+              await context.sendActivity("reaction.Type=" + reaction.type + " - Don't LAUGH at me!");
+              break;
+            case "surprised":
+              await context.sendActivity("reaction.Type=" + reaction.type + " - SURPRISED????");
+              break;
+            case "sad":
+              await context.sendActivity("reaction.Type=" + reaction.type + " - Don't be so SAD! ");
+              break;
+            case "angry":
+                await context.sendActivity("reaction.Type=" + reaction.type + " - Why so ANGRY????");
+                break;
+            /*   case "":
+                await context.sendActivity("reaction.Type=" + reaction.type + " - ");
+                break; */
             default:
               await context.sendActivity("reaction.Type="  + reaction.type);              
                 break;
