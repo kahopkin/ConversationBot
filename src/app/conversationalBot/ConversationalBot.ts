@@ -161,7 +161,7 @@ export class ConversationalBot extends TeamsActivityHandler {
         context.activity.reactionsAdded.forEach(async (reaction) => {
             switch(reaction.type){
             case "like":
-              await context.sendActivity("reaction.Type=" + " - Thank you!");
+              await context.sendActivity("reaction.Type=" + reaction.type + " - Thank you!");
               break;
             case "heart":
               await context.sendActivity("reaction.Type=" + reaction.type + " - Thank you! I HEART you 2!");
